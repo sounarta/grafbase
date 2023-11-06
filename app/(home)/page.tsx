@@ -1,8 +1,13 @@
+
 import React from "react";
 
-const Home = () => {
+const Home = async() => {
+
+
   return (
     <section className=" paddings mb-16 flex flex-col items-start justify-start ">
+
+      
 
     <h1>
       Categories

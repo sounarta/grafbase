@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.26.2",
     "@headlessui/react": "^1.7.17",
     "@types/jsonwebtoken": "^9.0.4",
     "cloudinary": "^1.41.0",
@@ -17,11 +18,14 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "graphql-request": "^6.1.0",
     "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.2.0",
+    "mongoose": "^8.0.0",
     "next": "14.0.1",
     "next-auth": "^4.24.4",
     "prettier": "^3.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "svix": "^1.13.0"
   },
   "devDependencies": {
     "@grafbase/sdk": "^0.7.2",

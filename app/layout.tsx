@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import React from 'react'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+
+import { ClerkProvider } from '@clerk/nextjs'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,10 +21,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
+        <ClerkProvider
+        appearance={{
+          elements:{
+            formButtonPrimary:'bg-blue',
+            footerActionLink:'text-blue hover:text-white-100'
+          }
+        }}>
+        
         {children}
-        <Footer/>
+        
+
+        </ClerkProvider>
+
         </body>
+        
     </html>
   )
 }

@@ -1,4 +1,5 @@
 import { NavLinks } from "@/constants";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,7 +7,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav className=" flex items-center justify-between gap-4 border-b border-nav-border px-8 py-5">
-      <div className=" flexStart flex-1 gap-10">
+      <div className=" flexStart gap-10">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -26,8 +27,17 @@ const Navbar = () => {
             </Link>
          ))}
          
-
         </ul>
+      </div>
+      <div className=" flexCenter gap-4">
+
+     
+      <SignedIn>
+      <UserButton afterSignOutUrl="/"/>
+      <Link href='/create-project'>
+      Show Start
+      </Link>
+      </SignedIn>
       </div>
     </nav>
   );
